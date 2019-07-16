@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#c99f9e9e"
+    android:orientation="vertical">
+
+
+
+
+    <Button
+        android:id="@+id/btn_play"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="@string/pause"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:text="00:00/00:00"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_toRightOf="@+id/tv_time"
+        android:layout_toLeftOf="@+id/set"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       />
+
+
+<LinearLayout
+    android:id="@+id/set"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentRight="true" >
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/btn_volume"
+        android:text="音量"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/seekBar"
+        android:layout_toLeftOf="@+id/btn_setting"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        tools:ignore="NotSibling"
+        android:gravity="center"/>
+
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/btn_setting"
+        android:text="@string/smallScreen"
+        android:paddingLeft="0dp"
+        android:layout_toLeftOf="@+id/btn_stop"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
+
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/btn_stop"
+        android:text="@string/stop"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
+</LinearLayout>
+
+
+</RelativeLayout>
